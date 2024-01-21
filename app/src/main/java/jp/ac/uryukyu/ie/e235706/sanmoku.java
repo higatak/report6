@@ -18,7 +18,7 @@ public class sanmoku {
         System.out.println("〇 のプレイヤー："+name1);
         System.out.println("× のプレイヤー："+name2);
     }
-    
+
     public static char[] board=new char[9];
 
     public static String 順番を決める() {
@@ -185,10 +185,32 @@ public class sanmoku {
                             
             } 
 
-
+    public static void おすすめの遊び(){
+        /*二人でできる種目で想定 */
+        String[] Insidegames = {"囲碁", "将棋", "オセロ",
+                                "チェス" ,"ヌメロン" ,"五目並べ" ,
+                                "カードゲーム（遊戯王等）" ,"スマブラ" ,"テトリス" ,
+                                "世界の遊び対戦" ,"バッチャンコ" ,"共通テスト解きTA(タイムアタック）",
+                                "あえての三目並べ（マルバツゲーム）"};
+        Random g = new Random();
+        String Insidegame = Insidegames[g.nextInt(13)];
+        String[] Outsidegames = {"テニス", "バスケ(イレブン)", "PK対決",
+                                 "卓球" ,"バドミントン","イギリス（テニス）" ,
+                                 "ドリブル対決(サッカー）" ,"ピッチング対決（野球）" ,"ボウリング",
+                                 "ボルダリングTA (タイムアタック）" ,"ループ道路マラソン" ,"リフティング対決",
+                                 "あえての三目並べ(マルバツゲーム)"};
+        Random s = new Random();
+        String Outsidegame = Outsidegames[s.nextInt(13)];
+        System.out.println("三目並べ(マルバツゲーム）に飽きたもしくは決着がつかないのなら次の種目で対決しよう");
+        
+        System.out.println("屋内でできる種目:" + Insidegame);
+        System.out.println("屋外でできる種目:" + Outsidegame);
+    }
+    
+}
 
 
 
     
-}
+
     
